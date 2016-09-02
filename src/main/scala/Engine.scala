@@ -1,5 +1,3 @@
-package org.template.classification
-
 import io.prediction.controller.EngineFactory
 import io.prediction.controller.Engine
 

@@ -1,5 +1,3 @@
-package org.template.classification
-
 import io.prediction.controller.PPreparator
 
 import org.apache.spark.SparkContext

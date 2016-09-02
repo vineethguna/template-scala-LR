@@ -1,5 +1,3 @@
-package org.template.classification
-
 import io.prediction.controller.LServing
 
 class Serving extends LServing[Query, PredictedResult] {
