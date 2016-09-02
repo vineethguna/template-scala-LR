@@ -35,7 +35,7 @@ object TrainApp extends App {
 
   val dataSourceParams = DataSourceParams(sys.env.get("APP_NAME").get)
   val preparatorParams = EmptyParams()
-  val algorithmParamsList = Seq("als" -> ALSAlgorithmParams(rank = 10, numIterations = 10, lambda = 0.01, seed = Some(3)))
+  val algorithmParamsList = Seq("LS" -> AlgorithmParams(10, 0.1, true, true))
   val servingParams = EmptyParams()
 
   val engineInstance = EngineInstance(
