@@ -18,7 +18,7 @@ object ClassificationEngine extends EngineFactory {
     new Engine(
       classOf[DataSource],
       classOf[Preparator],
-      Map("LR" -> classOf[LogisticRegressionAlgorithm]),
+      Map("LR" -> classOf[LogisticRegressionAlgorithm], "SVM" -> classOf[LinearSVM]),
       classOf[Serving])
   }
 }

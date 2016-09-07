@@ -9,7 +9,7 @@
   },
   "algorithms": [
     {
-      "name": "LR",
+      "name": "SVM",
       "params": {
         "lambda": 1.0
       }
