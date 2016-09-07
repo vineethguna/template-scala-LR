@@ -11,8 +11,9 @@ def import_events(client, file):
   print "Importing data..."
   for line in f:
     data = line.rstrip('\r\n').split(",")
-    result = data[2]
-    features = [float(x) for x in [data[0], data[1]]]
+    result = data[0]
+    features = [float(x) for x in data[1:]]
+    print features
     client.create_event(
       event="$set",
       entity_type="user",
