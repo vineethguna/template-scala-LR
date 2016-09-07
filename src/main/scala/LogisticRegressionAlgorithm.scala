@@ -8,13 +8,6 @@ import org.apache.spark.SparkContext
 
 import grizzled.slf4j.Logger
 
-case class AlgorithmParams(
-  maxIter: Int,
-  regParam: Double,
-  fitIntercept: Boolean,
-  categoricalPrediction: Boolean
-) extends Params
-
 // extends P2LAlgorithm because the MLlib's NaiveBayesModel doesn't contain RDD.
 class LogisticRegressionAlgorithm()
   extends P2LAlgorithm[PreparedData, LogisticRegressionModel, Query, PredictedResult] {
