@@ -35,7 +35,11 @@ object TrainApp extends App {
 
   val dataSourceParams = DataSourceParams(sys.env.get("APP_NAME").get, Some(5))
   val preparatorParams = EmptyParams()
-  val algorithmParamsList = Seq("LR" -> AlgorithmParams(10, 0.1, true, true))
+  var algorithm = Seq("LR" -> AlgorithmParams(10, 0.1, true, true))
+  if(sys.env("ALGORITHM") == "SVM"){
+    algorithm = Seq("SVM" -> AlgorithmParams(10, 0.1, true, true))
+  }
+  val algorithmParamsList = algorithm
   val servingParams = EmptyParams()
 
   val engineInstance = EngineInstance(
